@@ -1,57 +1,19 @@
-#
-#  Be sure to run `pod spec lint SPXDefines.podspec' to ensure this is a
-#  valid spec and to remove all comments including this before submitting the spec.
-#
-#  To learn more about Podspec attributes see http://docs.cocoapods.org/specification.html
-#  To see working Podspecs in the CocoaPods repo see https://github.com/CocoaPods/Specs/
-#
-
 Pod::Spec.new do |s|
 
-  # ―――  Spec Metadata  ―――――――――――――――――――――――――――――――――――――――――――――――――――――――――― #
-  #
-  #  These will help people to find your library, and whilst it
-  #  can feel like a chore to fill in it's definitely to your advantage. The
-  #  summary should be tweet-length, and the description more in depth.
-  #
-
   s.name         = "SPXDefines"
-  s.version      = "0.0.1"
-  s.summary      = "Assertion handling for Objective-C"
-
+  s.version      = "1.0.0"
+  s.summary      = "Useful macro's for Objective-C projects"
   s.description  = <<-DESC
-                   A longer description of SPXDefines in Markdown format.
+                   Useful macro's for Objective-C projects.
 
-                   * Think: Why did you write this? What is the focus? What does it do?
-                   * CocoaPods will be using this to generate tags, and improve search results.
-                   * Try to keep it short, snappy and to the point.
-                   * Finally, don't worry about the indent, CocoaPods strips it!
+                   * SPXAssertionDefines - Provides convenience assertions that will NOT crash on release builds
+                   * SPXEncodingDefines - Provides cleaner encoding/decoding macros with compile-time checking
+                   * SPXLoggingDefines - Provides cleaner logging, using CocoaLumberjack if available, otherwise falling gracefully back to NSLog with cleaner output.
                    DESC
 
   s.homepage     = "https://github.com/shaps80/SPXDefines"
-  # s.screenshots  = "www.example.com/screenshots_1", "www.example.com/screenshots_2"
-
-
-  # ―――  Spec License  ――――――――――――――――――――――――――――――――――――――――――――――――――――――――――― #
-  #
-  #  Licensing your code is important. See http://choosealicense.com for more info.
-  #  CocoaPods will detect a license file if there is a named LICENSE*
-  #  Popular ones are 'MIT', 'BSD' and 'Apache License, Version 2.0'.
-  #
-
   s.license      = 'MIT (example)'
-  # s.license      = { :type => 'MIT', :file => 'FILE_LICENSE' }
-
-
-  # ――― Author Metadata  ――――――――――――――――――――――――――――――――――――――――――――――――――――――――― #
-  #
-  #  Specify the authors of the library, with email addresses. Email addresses
-  #  of the authors by using the SCM log. E.g. $ git log. If no email can be
-  #  found CocoaPods accept just the names.
-  #
-
   s.author             = { "Shaps M" => "shaps80@me.com" }
-  # s.authors          = { "Shaps M" => "shaps80@me.com", "other author" => "email@address.com" }
   # s.author           = 'Shaps M', 'other author'
   # s.social_media_url = "http://twitter.com/Shaps M"
 
