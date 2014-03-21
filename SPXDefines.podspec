@@ -26,4 +26,17 @@ Pod::Spec.new do |s|
 
   s.source_files  = '.', '*.{h,m}'
   s.requires_arc = true
+	
+	s.subspec 'Asserts' do |asserts|
+		asserts.source_files = 'SPXAsserts/*.{h,m}'
+	end
+	
+	s.subspec 'Encoding' do |encoding|
+		encoding.source_files = 'SPXEncoding/*.{h,m}'
+	end
+	
+	s.subspec 'Logging' do |logging|
+		logging.source_files = 'SPXLogging/*.{h,m}'
+	end
+	
 end
