@@ -51,15 +51,15 @@
 /**
  *  Provides encoding of objects via encode(object);
  **/
-#define encode(value) encodeT(self, value)
+#define encodeObjectWithKey(target, key) ({if (NO){[target key];} [aCoder encodeObject:[target valueForKey:OBJC_STRINGIFY(key)] forKey:OBJC_STRINGIFY(key)];})
 #define encodeT(target, value) encodeObjectWithKey(target, value)
-#define encodeObjectWithKey(target, key) ({[target key], [aCoder encodeObject:[target valueForKey:OBJC_STRINGIFY(key)] forKey:OBJC_STRINGIFY(key)];})
+#define encode(value) encodeT(self, value)
 
 
 /**
  *  Provides decoding of objects via decode(object);
  */
-#define decodeObjectWithKey(target, key) ({[target key], [target setValue:[aDecoder decodeObjectForKey:OBJC_STRINGIFY(key)] forKey:OBJC_STRINGIFY(key)];})
+#define decodeObjectWithKey(target, key) ({if (NO){[target key];} [target setValue:[aDecoder decodeObjectForKey:OBJC_STRINGIFY(key)] forKey:OBJC_STRINGIFY(key)];})
 #define decodeT(target, value) decodeObjectWithKey(target, value)
 #define decode(value) decodeT(self, value)
 
