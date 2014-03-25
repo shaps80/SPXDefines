@@ -47,6 +47,7 @@ The following code will encode or decode variables using NSCoding. It uses `enco
 	
 	// defined in header or private interface
 	@property (nonatomic, copy) NSString *name;
+	@property (nonatomic, copy) NSInteger age;
 	
 	...
 	
@@ -55,13 +56,15 @@ The following code will encode or decode variables using NSCoding. It uses `enco
 		self = [super init];
 		if (self) {
 			decode(name);	
+			decode(age);
 		}
 		return self;
 	} 
 	
 	- (void)encodeWithCoder:(NSCoder *)aCoder
 	{
-		encode(name);	
+		encode(name);
+		encode(age);	
 	} 
 
 
