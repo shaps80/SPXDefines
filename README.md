@@ -22,6 +22,8 @@ Installation
 
 To use the SPXDefines in an app, just drag the files into your project and import the header file into any class where you wish to make use of the SPXDefines functionality.
 
+If you're using PODs, simply include it in your Podfile: `pod 'SPXDefines'`
+
 Macro's
 -------------
  
