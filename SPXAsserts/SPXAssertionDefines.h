@@ -128,7 +128,7 @@
 /**
  *  Error status codes
  */
-typedef NS_ENUM(NSInteger, TABErrorCode) {
+typedef NS_ENUM(NSInteger, SPXErrorCode) {
   /**
    *  Internal error code
    */
