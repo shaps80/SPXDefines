@@ -156,8 +156,8 @@ extern NSError *NSErrorMake(NSString *message, NSInteger code, NSDictionary *aUs
 #define InvalidConditionString(condition) (@"Invalid condition not satisfying: " #condition)
 #define GenericAssertCondition(ctype, condition) NS ## ctype ## Assert((condition), InvalidConditionString((condition)))
 #define GenericErrorMake(condition, func) NSErrorMake(InvalidConditionString((condition)), SPXErrorCodeInternal, nil, func)
-#define GenericAssertTrueOrPerformAction(ctype, condition, action) do{ ctype ## AssertCondition(condition); \
-if (!(condition)) { ctype ## ErrorMake(condition); action; } } while(0)
+#define GenericAssertTrueOrPerformAction(ctype, condition, action) ({ ctype ## AssertCondition(condition); \
+if (!(condition)) { ctype ## ErrorMake(condition); action; } })
 #define GenericAssertTrueOrReturnError(ctype, condition) do{ ctype ## AssertCondition(condition); \
 if (!(condition)) { return ctype ## ErrorMake(condition); } } while(0)
 
