@@ -1,5 +1,9 @@
 /*
    Copyright (c) 2014 Shaps Mohsenin. All rights reserved.
+ 
+ This file is based on a collaboration by Krzysztof Zabłocki and Sam Dods.
+ Krzysztof Zabłocki: https://github.com/krzysztofzablocki
+ Sam Dods: https://github.com/samdods
 
  Redistribution and use in source and binary forms, with or without
  modification, are permitted provided that the following conditions are met:
