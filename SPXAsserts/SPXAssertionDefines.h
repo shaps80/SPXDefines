@@ -1,5 +1,9 @@
 /*
    Copyright (c) 2014 Shaps Mohsenin. All rights reserved.
+ 
+ This file is based on a collaboration by Krzysztof Zabłocki and Sam Dods.
+ Krzysztof Zabłocki: https://github.com/krzysztofzablocki
+ Sam Dods: https://github.com/samdods
 
  Redistribution and use in source and binary forms, with or without
  modification, are permitted provided that the following conditions are met:
@@ -128,7 +132,7 @@
 /**
  *  Error status codes
  */
-typedef NS_ENUM(NSInteger, TABErrorCode) {
+typedef NS_ENUM(NSInteger, SPXErrorCode) {
   /**
    *  Internal error code
    */
@@ -156,8 +160,8 @@ extern NSError *NSErrorMake(NSString *message, NSInteger code, NSDictionary *aUs
 #define InvalidConditionString(condition) (@"Invalid condition not satisfying: " #condition)
 #define GenericAssertCondition(ctype, condition) NS ## ctype ## Assert((condition), InvalidConditionString((condition)))
 #define GenericErrorMake(condition, func) NSErrorMake(InvalidConditionString((condition)), SPXErrorCodeInternal, nil, func)
-#define GenericAssertTrueOrPerformAction(ctype, condition, action) do{ ctype ## AssertCondition(condition); \
-if (!(condition)) { ctype ## ErrorMake(condition); action; } } while(0)
+#define GenericAssertTrueOrPerformAction(ctype, condition, action) ({ ctype ## AssertCondition(condition); \
+if (!(condition)) { ctype ## ErrorMake(condition); action; } })
 #define GenericAssertTrueOrReturnError(ctype, condition) do{ ctype ## AssertCondition(condition); \
 if (!(condition)) { return ctype ## ErrorMake(condition); } } while(0)
 
