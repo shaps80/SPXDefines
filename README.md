@@ -33,10 +33,12 @@ Provides better assertion handling in an iOS project. It will NEVER crash in a R
 
 The following code will assert 'condition', if it fails, write the assertion to the console and break on the offending line of code. In a release build it will simply return.
 
-		AssertTrueOrReturnNo(condition);
-		AssertTrueOrReturnNil(condition);
-		AssertTrueOrReturnError(condition);
-		AssertTrueOrReturn(condition);
+```smalltalk
+AssertTrueOrReturnNo(condition);
+AssertTrueOrReturnNil(condition);
+AssertTrueOrReturnError(condition);
+AssertTrueOrReturn(condition);
+```
 
 The following code will also assert 'condition', but instead of returning, it will perform the specified action.
 		
@@ -47,27 +49,30 @@ The following code will also assert 'condition', but instead of returning, it wi
 
 The following code will encode or decode variables using NSCoding. It uses `encode()` and `decode()` which expand to `[aEncoder encodeObject:name forKey:@"name"]` and `[aDecoder decodeObjectForKey:@"name"]` respectively.
 	
-	// defined in header or private interface
-	@property (nonatomic, copy) NSString *name;
-	@property (nonatomic, copy) NSInteger age;
+```smalltalk
+@property (nonatomic, copy) NSString *name;
+@property (nonatomic, copy) NSInteger age;
+
+...
+
+- (instancetype)initWithCoder:(NSCoder *)aDecoder
+{
+	self = [super init];
+  if (!self) return nil;
+  
+	decode(name);	
+	decode(age);
 	
-	...
+	return self;
+} 
+
+- (void)encodeWithCoder:(NSCoder *)aCoder
+{
+	encode(name);
+	encode(age);	
+}
 	
-	- (instancetype)initWithCoder:(NSCoder *)aDecoder
-	{
-		self = [super init];
-		if (self) {
-			decode(name);	
-			decode(age);
-		}
-		return self;
-	} 
-	
-	- (void)encodeWithCoder:(NSCoder *)aCoder
-	{
-		encode(name);
-		encode(age);	
-	} 
+```
 
 
 **SPXLoggingDefines**
@@ -75,11 +80,18 @@ The following code will encode or decode variables using NSCoding. It uses `enco
 The following methods will first look for CocoaLumberjack and if it exists, use that for logging. If not it will fall back to NSLog but with much improved logging ;)
 
 The pretty format
-`YYYY-MM-DD HH:MM:SS | LINE # | CLASS | SELECTOR | MESSAGE`
+
+```smalltalk
+YYYY-MM-DD HH:MM:SS | LINE # | CLASS | SELECTOR | MESSAGE
+```
 
 Example
-`2014-03-21 14:31:22 | 23 | AppDelegate | applicationDidFinishLaunchingWithOptions: | Hello World!`
+```smalltalk
+2014-03-21 14:31:22 | 23 | AppDelegate | applicationDidFinishLaunchingWithOptions: | Hello World!
+```
 
-	logMethod; // simply logs the current class and selector
-	SPXLog(@"Hello World!");
+```smalltalk
+logMethod; // simply logs the current class and selector
+SPXLog(@"Hello World!");
+```
 
