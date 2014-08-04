@@ -81,14 +81,11 @@ The following methods will first look for CocoaLumberjack and if it exists, use 
 
 The pretty format
 
-```smalltalk
-YYYY-MM-DD HH:MM:SS | LINE # | CLASS | SELECTOR | MESSAGE
-```
+`YYYY-MM-DD HH:MM:SS | LINE # | CLASS | SELECTOR | MESSAGE`
 
 Example
-```smalltalk
-2014-03-21 14:31:22 | 23 | AppDelegate | applicationDidFinishLaunchingWithOptions: | Hello World!
-```
+
+`2014-03-21 14:31:22 | 23 | AppDelegate | applicationDidFinishLaunchingWithOptions: | Hello World!`
 
 ```smalltalk
 logMethod; // simply logs the current class and selector
