@@ -42,7 +42,7 @@ AssertTrueOrReturn(condition);
 
 The following code will also assert 'condition', but instead of returning, it will perform the specified action.
 		
-		AssertTrueOrPerformAction(condition, NSLog(@"Help!"));
+`AssertTrueOrPerformAction(condition, NSLog(@"Help!"));`
 
 
 **SPXEncodingDefines**
@@ -57,7 +57,7 @@ The following code will encode or decode variables using NSCoding. It uses `enco
 
 - (instancetype)initWithCoder:(NSCoder *)aDecoder
 {
-	self = [super init];
+  self = [super init];
   if (!self) return nil;
   
 	decode(name);	
