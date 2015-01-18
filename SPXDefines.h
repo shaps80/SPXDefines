@@ -30,6 +30,61 @@
 #import "SPXAssertionDefines.h"
 
 
+#pragma mark - Descriptions
+
+#import <objc/runtime.h>
+
+/**
+ *  Use these in your code
+ */
+
+#define keyPath(keyPath) _keyPath(self, keyPath)
+#define keyPathT(target, keyPath) _keyPath(target, keyPath)
+#define keyPathI(ivar) _keyPathI(ivar)
+#define keyValue(target, keyPath) _keyValue(target, keyPath)
+#define keyValueI(ivar) _keyValueI(ivar)
+#define description(...) _descriptionT(self, ##__VA_ARGS__)
+#define descriptionT(target, ...) _descriptionT(target, ##__VA_ARGS__)
+
+
+/**
+ *  These are intended for internal use only!
+ */
+
+#define _OBJC_STRINGIFY(x) @#x
+#define _STRINGIFY(x) #x
+
+
+#define _keyPath(target_, keyPath_) \
+(((void)(NO && ((void)target_.keyPath_, NO)), _STRINGIFY(keyPath_)))
+
+#define _keyPathI(ivar_) \
+(((void)(NO && ((void)ivar_, NO)), _OBJC_STRINGIFY(ivar_)))
+
+#define _keyValue(target_, keyPath_) \
+_OBJC_STRINGIFY(keyPath_) : (target_.keyPath_) ?: @"nil"
+
+#define _keyValueI(ivar_) \
+_OBJC_STRINGIFY(ivar_) : (ivar_) ?: @"nil"
+
+#define _descriptionT(target_, ...) [super.description stringByAppendingFormat:@"%@", [[target_ dictionaryWithValuesForKeys:@[ __VA_ARGS__ ]] description]]
+
+
+
+/**
+ *  This function determines if the specified object is a meta class or an actual instance
+ *
+ *  @param objOrClass The object or class to test
+ *
+ *  @return YES if the object is a meta class, NO otherwise
+ */
+static inline BOOL isMetaClass(id objOrClass)
+{
+  Class theClass = object_getClass(objOrClass);
+  return class_isMetaClass(theClass);
+}
+
+
 // Cross platform support
 
 #pragma mark - Universal
