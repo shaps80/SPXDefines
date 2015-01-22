@@ -31,7 +31,7 @@ Macro's
 
 When building custom classes its often good practice to override -description to provide other developers better output in the console. To make this easier and get better type safety you can use my new description methods.
 
-```smalltalk
+```objc
 - (NSString *)description
 {
   return description(@keyPath(name), @keyPath(age));
