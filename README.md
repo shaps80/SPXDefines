@@ -40,7 +40,7 @@ When building custom classes its often good practice to override -description to
 
 Which expands to:
 
-```smalltalk
+```objc
 - (NSString *)description
 {
   return [super.description stringByAppendingFormat:@"%@", [self dictionaryWithValuesForKeys:@[ @"name", @"age" ].description];
@@ -55,7 +55,7 @@ Provides better assertion handling in an iOS project. It will NEVER crash in a R
 
 The following code will assert 'condition', if it fails, write the assertion to the console and break on the offending line of code. In a release build it will simply return.
 
-```smalltalk
+```objc
 AssertTrueOrReturnNo(condition);
 AssertTrueOrReturnNil(condition);
 AssertTrueOrReturnError(condition);
@@ -71,7 +71,7 @@ The following code will also assert 'condition', but instead of returning, it wi
 
 The following code will encode or decode variables using NSCoding. It uses `encode()` and `decode()` which expand to `[aEncoder encodeObject:name forKey:@"name"]` and `[aDecoder decodeObjectForKey:@"name"]` respectively.
 	
-```smalltalk
+```objc
 @property (nonatomic, copy) NSString *name;
 @property (nonatomic, copy) NSInteger age;
 
@@ -109,7 +109,7 @@ Example
 
 `2014-03-21 14:31:22 | 23 | AppDelegate | applicationDidFinishLaunchingWithOptions: | Hello World!`
 
-```smalltalk
+```objc
 logMethod; // simply logs the current class and selector
 SPXLog(@"Hello World!");
 ```
