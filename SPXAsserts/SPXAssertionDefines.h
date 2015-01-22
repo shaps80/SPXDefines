@@ -151,7 +151,7 @@ typedef NS_ENUM(NSInteger, SPXErrorCode) {
  *
  *  @return An instance of NSError
  */
-extern NSError *NSErrorMake(NSString *message, NSInteger code, NSDictionary *aUserInfo, NSString *methodOrFunction);
+extern NSError *SPXErrorMake(NSString *message, NSInteger code, NSDictionary *aUserInfo, Class klass, NSString *methodOrFunction);
 
 
 
@@ -159,22 +159,23 @@ extern NSError *NSErrorMake(NSString *message, NSInteger code, NSDictionary *aUs
 #define NSObjcAssert NSAssert
 #define InvalidConditionString(condition) (@"Invalid condition not satisfying: " #condition)
 #define GenericAssertCondition(ctype, condition) NS ## ctype ## Assert((condition), InvalidConditionString((condition)))
-#define GenericErrorMake(condition, func) NSErrorMake(InvalidConditionString((condition)), SPXErrorCodeInternal, nil, func)
+#define GenericErrorMake(condition, class, func) SPXErrorMake(InvalidConditionString((condition)), SPXErrorCodeInternal, nil, class, func)
 #define GenericAssertTrueOrPerformAction(ctype, condition, action) ({ ctype ## AssertCondition(condition); \
 if (!(condition)) { ctype ## ErrorMake(condition); action; } })
-#define GenericAssertTrueOrReturnError(ctype, condition) do{ ctype ## AssertCondition(condition); \
-if (!(condition)) { return ctype ## ErrorMake(condition); } } while(0)
+#define GenericAssertTrueOrReturnError(ctype, condition) {{ ctype ## AssertCondition(condition); \
+if (!(condition)) { return ctype ## ErrorMake(condition); } })
 
 
 // Intended for internal-use only.
 #define ObjcAssertCondition(condition) GenericAssertCondition(Objc, condition)
 // Intended for internal-use only.
-#define ObjcErrorMake(condition) GenericErrorMake((condition), NSStringFromSelector(_cmd))
+#define ObjcErrorMake(condition) GenericErrorMake((condition), self.class, NSStringFromSelector(_cmd))
 
 // Intended for internal-use only.
 #define CAssertCondition(condition) GenericAssertCondition(C, condition)
 // Intended for internal-use only.
-#define CErrorMake(condition) GenericErrorMake((condition), [NSString stringWithUTF8String:__PRETTY_FUNCTION__])
+#define CErrorMake(condition) GenericErrorMake((condition), nil, [NSString stringWithUTF8String:__PRETTY_FUNCTION__])
 
 
 #endif
+

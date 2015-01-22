@@ -25,11 +25,26 @@
 
 #import "SPXAssertionDefines.h"
 
-NSError *NSErrorMake(NSString *message, NSInteger code, NSDictionary *aUserInfo, NSString *methodOrFunction)
+NSError *SPXErrorMake(NSString *message, NSInteger code, NSDictionary *aUserInfo, Class klass, NSString *methodOrFunction)
 {
   NSMutableDictionary *userInfo = [NSMutableDictionary dictionaryWithDictionary:aUserInfo];
   userInfo[NSLocalizedDescriptionKey] = message;
-  NSError *error = [NSError errorWithDomain:@"uk.co.snippex.asserts" code:code userInfo:userInfo];
-  NSLog(@"%@ | %@ | %@", error.domain, message, methodOrFunction ?: @"");
+  NSString *identifier = nil;
+  
+  if (klass) {
+    identifier = [NSBundle bundleForClass:klass].bundleIdentifier;
+  }
+  
+  if (!identifier) {
+    identifier = [NSBundle mainBundle].bundleIdentifier;
+  }
+  
+  NSError *error = [NSError errorWithDomain:[identifier stringByAppendingPathExtension:@"assertion"] code:code userInfo:userInfo];
+  NSString *className = klass ? [NSString stringWithFormat:@"%@ | ", NSStringFromClass(klass)] : @"";
+  
+  NSLog(@"%@ | %@ | %@%@", error.domain, message, className, methodOrFunction ?: @"");
+  
   return error;
 }
+
+
