@@ -82,16 +82,16 @@ The following code will encode or decode variables using NSCoding. It uses `enco
   self = [super init];
   if (!self) return nil;
   
-	decode(name);	
-	decode(age);
+  decode(name);	
+  decode(age);
 	
-	return self;
+  return self;
 } 
 
 - (void)encodeWithCoder:(NSCoder *)aCoder
 {
-	encode(name);
-	encode(age);	
+  encode(name);
+  encode(age);	
 }
 	
 ```
