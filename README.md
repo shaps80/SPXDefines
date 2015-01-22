@@ -26,6 +26,28 @@ If you're using PODs, simply include it in your Podfile: `pod 'SPXDefines'`
 
 Macro's
 -------------
+
+**Description Overrides**
+
+When building custom classes its often good practice to override -description to provide other developers better output in the console. To make this easier and get better type safety you can use my new description methods.
+
+```smalltalk
+- (NSString *)description
+{
+  return description(@keyPath(name), @keyPath(age));
+}
+```
+
+Which expands to:
+
+```smalltalk
+- (NSString *)description
+{
+  return [super.description stringByAppendingFormat:@"%@", [self dictionaryWithValuesForKeys:@[ @"name", @"age" ].description];
+}
+```
+
+_Note: This method only supports properties or methods since internally it uses KVO on self._
  
 **SPXAssertionDefines**
 
