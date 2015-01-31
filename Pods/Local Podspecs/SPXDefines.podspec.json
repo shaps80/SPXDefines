@@ -20,36 +20,47 @@
     "git": "https://github.com/shaps80/SPXDefines.git",
     "tag": "1.1.0"
   },
-  "source_files": "Classes/**/*.{h,m}",
   "requires_arc": true,
   "subspecs": [
     {
       "name": "Asserts",
-      "source_files": [
-        "Classes/SPXAsserts/*.{h,m}",
-        "Classes/SPXDefinesCommon.h"
-      ]
+      "source_files": "Classes/SPXAsserts/*.{h,m}",
+      "dependencies": {
+        "SPXDefines/Common": [
+
+        ]
+      }
     },
     {
       "name": "Encoding",
-      "source_files": [
-        "Classes/SPXEncoding/*.{h,m}",
-        "Classes/SPXDefinesCommon.h"
-      ]
+      "source_files": "Classes/SPXEncoding/*.{h,m}",
+      "dependencies": {
+        "SPXDefines/Common": [
+
+        ]
+      }
     },
     {
       "name": "Logging",
-      "source_files": [
-        "Classes/SPXLogging/*.{h,m}",
-        "Classes/SPXDefinesCommon.h"
-      ]
+      "source_files": "Classes/SPXLogging/*.{h,m}",
+      "dependencies": {
+        "SPXDefines/Common": [
+
+        ]
+      }
     },
     {
       "name": "Description",
-      "source_files": [
-        "Classes/SPXDescription/*.{h,m}",
-        "Classes/SPXDefinesCommon.h"
-      ]
+      "source_files": "Classes/SPXDescription/*.{h,m}",
+      "dependencies": {
+        "SPXDefines/Common": [
+
+        ]
+      }
+    },
+    {
+      "name": "Common",
+      "source_files": "Classes/SPXDefinesCommon.h"
     }
   ]
 }

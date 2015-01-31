@@ -18,6 +18,12 @@
 #define COCOAPODS_VERSION_MINOR_SPXDefines_Asserts 1
 #define COCOAPODS_VERSION_PATCH_SPXDefines_Asserts 0
 
+// SPXDefines/Common
+#define COCOAPODS_POD_AVAILABLE_SPXDefines_Common
+#define COCOAPODS_VERSION_MAJOR_SPXDefines_Common 1
+#define COCOAPODS_VERSION_MINOR_SPXDefines_Common 1
+#define COCOAPODS_VERSION_PATCH_SPXDefines_Common 0
+
 // SPXDefines/Description
 #define COCOAPODS_POD_AVAILABLE_SPXDefines_Description
 #define COCOAPODS_VERSION_MAJOR_SPXDefines_Description 1
