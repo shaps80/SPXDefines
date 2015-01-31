@@ -34,7 +34,7 @@ When building custom classes its often good practice to override -description to
 ```objc
 - (NSString *)description
 {
-  return description(@keyPath(name), @keyPath(age));
+  return SPXDescription(SPXKeyPath(name), SPXKeyPath(age));
 }
 ```
 
@@ -51,25 +51,25 @@ _Note: This method only supports properties or methods since internally it uses 
  
 **SPXAssertionDefines**
 
-Provides better assertion handling in an iOS project. It will NEVER crash in a RELEASE build, but will assert and break on the offending line of code in DEBUG builds. There are equivalent `CAssertTrueOr...` methods for usage inside C functions.
+Provides better assertion handling in an iOS project. It will NEVER crash in a RELEASE build, but will assert and break on the offending line of code in DEBUG builds. There are equivalent `SPXCAssertTrueOr...` methods for usage inside C functions.
 
 The following code will assert 'condition', if it fails, write the assertion to the console and break on the offending line of code. In a release build it will simply return.
 
 ```objc
-AssertTrueOrReturnNo(condition);
-AssertTrueOrReturnNil(condition);
-AssertTrueOrReturnError(condition);
-AssertTrueOrReturn(condition);
+SPXAssertTrueOrReturnNo(condition);
+SPXAssertTrueOrReturnNil(condition);
+SPXAssertTrueOrReturnError(condition);
+SPXAssertTrueOrReturn(condition);
 ```
 
 The following code will also assert 'condition', but instead of returning, it will perform the specified action.
 		
-`AssertTrueOrPerformAction(condition, NSLog(@"Help!"));`
+`SPXAssertTrueOrPerformAction(condition, NSLog(@"Help!"));`
 
 
 **SPXEncodingDefines**
 
-The following code will encode or decode variables using NSCoding. It uses `encode()` and `decode()` which expand to `[aEncoder encodeObject:name forKey:@"name"]` and `[aDecoder decodeObjectForKey:@"name"]` respectively.
+The following code will encode or decode variables using NSCoding. It uses `SPXEncode()` and `SPXDecode()` which expand to `[aEncoder encodeObject:name forKey:@"name"]` and `[aDecoder decodeObjectForKey:@"name"]` respectively. If you prefer to provide a custom encoder, decoder, you can use the SPXEncodeE and SPXDecodeE equivalents.
 	
 ```objc
 @property (nonatomic, copy) NSString *name;

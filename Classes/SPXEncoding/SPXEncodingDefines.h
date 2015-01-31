@@ -1,16 +1,16 @@
 /*
-   Copyright (c) 2014 Shaps Mohsenin. All rights reserved.
-
+ Copyright (c) 2014 Shaps Mohsenin. All rights reserved.
+ 
  Redistribution and use in source and binary forms, with or without
  modification, are permitted provided that the following conditions are met:
-
+ 
  1. Redistributions of source code must retain the above copyright notice, this
  list of conditions and the following disclaimer.
-
+ 
  2. Redistributions in binary form must reproduce the above copyright notice,
  this list of conditions and the following disclaimer in the documentation
  and/or other materials provided with the distribution.
-
+ 
  THIS SOFTWARE IS PROVIDED BY Shaps Mohsenin `AS IS' AND ANY EXPRESS OR
  IMPLIED WARRANTIES, INCLUDING, BUT NOT LIMITED TO, THE IMPLIED WARRANTIES OF
  MERCHANTABILITY AND FITNESS FOR A PARTICULAR PURPOSE ARE DISCLAIMED. IN NO
@@ -24,47 +24,21 @@
  */
 
 
-#ifndef _LOGGING_H
-#define _LOGGING_H
+#ifndef _SPX_ENCODING_DEFINES_H
+#define _SPX_ENCODING_DEFINES_H
+
+#import "SPXEncodingInternals.h"
 
 
-/**
- *  Returns the current date and time as a char* (formatted timestamp)
- *
- *  @return A formatted timestamp
- */
-char * getTime();
+#define SPXEncode(keyPath) _SPXEncodeE(aCoder, keyPath)
+#define SPXEncodeE(encoder, keyPath) _SPXEncodeE(encoder, keyPath)
+
+#define SPXDecode(keyPath) _SPXDecodeE(aDecoder, keyPath)
+#define SPXDecodeE(decoder, keyPath) _SPXDecodeE(decoder, keyPath)
 
 
-/**
- *  Logs the current method to the console
- *
- *  @note Logs to the console with the format, "YYYY-MM-DD HH:MM:SS | LINE # | CLASS | SELECTOR"
- */
-#define logMethod NSLog((@"%s | %d | %@ | %@ "), getTime(), __LINE__, NSStringFromClass([self class]), NSStringFromSelector(_cmd));
-
-
-#ifdef LOG_VERBOSE
-#define SPXLog(...) DDLogVerbose(__VA_ARGS__)
-
-#else
-
-
-/**
- *  TAB Specific logging to the console for logging messages (NSLog replacement)
- *
- *  @note Logs to the console with the format, "YYYY-MM-DD HH:MM:SS | LINE # | CLASS | SELECTOR | MESSAGE"
- */
-#define SPXLog(fmt, ...) NSLog((@"%s | %d | %@ | %@ | " fmt), getTime(), __LINE__, NSStringFromClass([self class]), NSStringFromSelector(_cmd), ##__VA_ARGS__)
-
-
-/**
- *  Overrides NSLog, stripping the line of all superfluous information so we can use TLog above with custom formatting.
- */
-#define NSLog(FORMAT, ...) fprintf(stderr,"%s\n", [[NSString stringWithFormat:FORMAT, ##__VA_ARGS__] UTF8String])
-
-#endif
-
+#define SPXCoder(keyPath) _SPXCoder(keyPath)
 
 
 #endif
+

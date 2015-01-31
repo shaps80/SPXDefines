@@ -1,7 +1,7 @@
 Pod::Spec.new do |s|
 
   s.name         = "SPXDefines"
-  s.version      = "1.0.5"
+  s.version      = "1.0.6"
   s.summary      = "Useful macro's for Objective-C projects"
   s.description  = <<-DESC
                    Useful macro's for Objective-C projects.
@@ -28,15 +28,19 @@ Pod::Spec.new do |s|
   s.requires_arc = true
 	
 	s.subspec 'Asserts' do |asserts|
-		asserts.source_files = 'SPXAsserts/*.{h,m}'
+		asserts.source_files = 'Classes/SPXAsserts/*.{h,m}', 'Classes/SPXDefinesCommon.h'
 	end
 	
 	s.subspec 'Encoding' do |encoding|
-		encoding.source_files = 'SPXEncoding/*.{h,m}'
+		encoding.source_files = 'Classes/SPXEncoding/*.{h,m}', 'Classes/SPXDefinesCommon.h'
 	end
 	
 	s.subspec 'Logging' do |logging|
-		logging.source_files = 'SPXLogging/*.{h,m}'
+		logging.source_files = 'Classes/SPXLogging/*.{h,m}', 'Classes/SPXDefinesCommon.h'
 	end
-	
+
+  s.subspec 'Description' do |description|
+    description.source_files = 'Classes/SPXDescription/*.{h,m}', 'Classes/SPXDefinesCommon.h'
+  end
+
 end

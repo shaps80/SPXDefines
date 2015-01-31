@@ -23,7 +23,11 @@
  ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
  */
 
-#import "SPXLoggingDefines.h"
+#import "time.h"
+#import "stdlib.h"
+
+#import "SPXLoggingInternal.h"
+
 
 /*
  Format

@@ -1,16 +1,16 @@
 /*
- Copyright (c) 2013 Snippex. All rights reserved.
- 
+   Copyright (c) 2015 Snippex. All rights reserved.
+
  Redistribution and use in source and binary forms, with or without
  modification, are permitted provided that the following conditions are met:
- 
+
  1. Redistributions of source code must retain the above copyright notice, this
  list of conditions and the following disclaimer.
- 
+
  2. Redistributions in binary form must reproduce the above copyright notice,
  this list of conditions and the following disclaimer in the documentation
  and/or other materials provided with the distribution.
- 
+
  THIS SOFTWARE IS PROVIDED BY Snippex `AS IS' AND ANY EXPRESS OR
  IMPLIED WARRANTIES, INCLUDING, BUT NOT LIMITED TO, THE IMPLIED WARRANTIES OF
  MERCHANTABILITY AND FITNESS FOR A PARTICULAR PURPOSE ARE DISCLAIMED. IN NO
@@ -23,52 +23,21 @@
  ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
  */
 
-#ifndef _DEFINES_H
-#define _DEFINES_H
-
-#import "SPXLoggingDefines.h"
-#import "SPXAssertionDefines.h"
-
-
-#pragma mark - Descriptions
+#ifndef _SPX_DEFINES_COMMON_H
+#define _SPX_DEFINES_COMMON_H
 
 #import <objc/runtime.h>
 
-/**
- *  Use these in your code
- */
 
-#define keyPath(keyPath) _keyPath(self, keyPath)
-#define keyPathT(target, keyPath) _keyPath(target, keyPath)
-#define keyPathI(ivar) _keyPathI(ivar)
-#define keyValue(target, keyPath) _keyValue(target, keyPath)
-#define keyValueI(ivar) _keyValueI(ivar)
-#define description(...) _descriptionT(self, ##__VA_ARGS__)
-#define descriptionT(target, ...) _descriptionT(target, ##__VA_ARGS__)
+#pragma mark - These are useful for building other macros
+
+#define _SPX_OBJC_STRINGIFY(x) @#x
+#define _SPX_STRINGIFY(x) #x
+
+#define _SPXCompileTimeCheck(code_, action_) (((void)(NO && ((void)code_, NO)), action_))
 
 
-/**
- *  These are intended for internal use only!
- */
-
-#define _OBJC_STRINGIFY(x) @#x
-#define _STRINGIFY(x) #x
-
-
-#define _keyPath(target_, keyPath_) \
-(((void)(NO && ((void)target_.keyPath_, NO)), _STRINGIFY(keyPath_)))
-
-#define _keyPathI(ivar_) \
-(((void)(NO && ((void)ivar_, NO)), _OBJC_STRINGIFY(ivar_)))
-
-#define _keyValue(target_, keyPath_) \
-_OBJC_STRINGIFY(keyPath_) : (target_.keyPath_) ?: @"nil"
-
-#define _keyValueI(ivar_) \
-_OBJC_STRINGIFY(ivar_) : (ivar_) ?: @"nil"
-
-#define _descriptionT(target_, ...) [super.description stringByAppendingFormat:@"%@", [[target_ dictionaryWithValuesForKeys:@[ __VA_ARGS__ ]] description]]
-
+#pragma mark - The following allow for nice code inspection or cross-platform support
 
 
 /**
@@ -156,4 +125,6 @@ static inline BOOL isMetaClass(id objOrClass)
 #endif
 
 
+
 #endif
+
