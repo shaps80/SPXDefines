@@ -12,13 +12,13 @@
 		5431A2CB1A7D0B6800C7861C /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5431A2C91A7D0B6800C7861C /* Main.storyboard */; };
 		5431A2CD1A7D0B6800C7861C /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 5431A2CC1A7D0B6800C7861C /* Images.xcassets */; };
 		5431A2DC1A7D0B6800C7861C /* SPXDefinesTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 5431A2DB1A7D0B6800C7861C /* SPXDefinesTests.m */; };
-		5431A2ED1A7D0C1A00C7861C /* Encoding.m in Sources */ = {isa = PBXBuildFile; fileRef = 5431A2EC1A7D0C1A00C7861C /* Encoding.m */; };
-		5431A2F01A7D0C2200C7861C /* Assertions.m in Sources */ = {isa = PBXBuildFile; fileRef = 5431A2EF1A7D0C2200C7861C /* Assertions.m */; };
-		5431A2F31A7D0C2900C7861C /* Logging.m in Sources */ = {isa = PBXBuildFile; fileRef = 5431A2F21A7D0C2900C7861C /* Logging.m */; };
-		5431A3051A7D0DD500C7861C /* SPXDefines.podspec in Resources */ = {isa = PBXBuildFile; fileRef = 5431A2FC1A7D0DD500C7861C /* SPXDefines.podspec */; };
 		5431A3061A7D0DD500C7861C /* SPXLoggingInternal.m in Sources */ = {isa = PBXBuildFile; fileRef = 5431A3011A7D0DD500C7861C /* SPXLoggingInternal.m */; };
 		5431A30B1A7D0F3E00C7861C /* SPXAssertionsInternal.m in Sources */ = {isa = PBXBuildFile; fileRef = 5431A30A1A7D0F3E00C7861C /* SPXAssertionsInternal.m */; };
-		5431A3151A7D270100C7861C /* Description.m in Sources */ = {isa = PBXBuildFile; fileRef = 5431A3141A7D270100C7861C /* Description.m */; };
+		5431A3171A7D42BF00C7861C /* Assertions.m in Sources */ = {isa = PBXBuildFile; fileRef = 5431A2EF1A7D0C2200C7861C /* Assertions.m */; };
+		5431A3181A7D42BF00C7861C /* Description.m in Sources */ = {isa = PBXBuildFile; fileRef = 5431A3141A7D270100C7861C /* Description.m */; };
+		5431A3191A7D42BF00C7861C /* Encoding.m in Sources */ = {isa = PBXBuildFile; fileRef = 5431A2EC1A7D0C1A00C7861C /* Encoding.m */; };
+		5431A31A1A7D42BF00C7861C /* Logging.m in Sources */ = {isa = PBXBuildFile; fileRef = 5431A2F21A7D0C2900C7861C /* Logging.m */; };
+		8709252218454C7B235EAA1F /* libPods-SPXDefines.a in Frameworks */ = {isa = PBXBuildFile; fileRef = D3428C335DBEE6A80A9AD7D6 /* libPods-SPXDefines.a */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -32,6 +32,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		15ED248084FE593132B05176 /* Pods-SPXDefines.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SPXDefines.release.xcconfig"; path = "Pods/Target Support Files/Pods-SPXDefines/Pods-SPXDefines.release.xcconfig"; sourceTree = "<group>"; };
 		5431A2BC1A7D0B6800C7861C /* SPXDefines.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SPXDefines.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		5431A2C01A7D0B6800C7861C /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		5431A2C11A7D0B6800C7861C /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
@@ -48,10 +49,7 @@
 		5431A2EF1A7D0C2200C7861C /* Assertions.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Assertions.m; sourceTree = "<group>"; };
 		5431A2F11A7D0C2900C7861C /* Logging.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Logging.h; sourceTree = "<group>"; };
 		5431A2F21A7D0C2900C7861C /* Logging.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Logging.m; sourceTree = "<group>"; };
-		5431A2F61A7D0DD500C7861C /* LICENSE.md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = net.daringfireball.markdown; path = LICENSE.md; sourceTree = "<group>"; };
-		5431A2F71A7D0DD500C7861C /* README.md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
 		5431A2FB1A7D0DD500C7861C /* SPXDefines.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SPXDefines.h; sourceTree = "<group>"; };
-		5431A2FC1A7D0DD500C7861C /* SPXDefines.podspec */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = SPXDefines.podspec; sourceTree = "<group>"; };
 		5431A2FE1A7D0DD500C7861C /* SPXEncodingDefines.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SPXEncodingDefines.h; sourceTree = "<group>"; };
 		5431A3001A7D0DD500C7861C /* SPXLoggingDefines.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SPXLoggingDefines.h; sourceTree = "<group>"; };
 		5431A3011A7D0DD500C7861C /* SPXLoggingInternal.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SPXLoggingInternal.m; sourceTree = "<group>"; };
@@ -65,6 +63,9 @@
 		5431A3131A7D270100C7861C /* Description.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Description.h; sourceTree = "<group>"; };
 		5431A3141A7D270100C7861C /* Description.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Description.m; sourceTree = "<group>"; };
 		5431A3161A7D282100C7861C /* SPXLoggingInternal.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SPXLoggingInternal.h; sourceTree = "<group>"; };
+		5431A31B1A7D42FF00C7861C /* SPXDefines.podspec */ = {isa = PBXFileReference; explicitFileType = text.script.ruby; fileEncoding = 4; path = SPXDefines.podspec; sourceTree = SOURCE_ROOT; };
+		C65D3D6F38AFD62B3FE74131 /* Pods-SPXDefines.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SPXDefines.debug.xcconfig"; path = "Pods/Target Support Files/Pods-SPXDefines/Pods-SPXDefines.debug.xcconfig"; sourceTree = "<group>"; };
+		D3428C335DBEE6A80A9AD7D6 /* libPods-SPXDefines.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-SPXDefines.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -72,6 +73,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				8709252218454C7B235EAA1F /* libPods-SPXDefines.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -85,6 +87,23 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		0595F80B468ACF683937606F /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				D3428C335DBEE6A80A9AD7D6 /* libPods-SPXDefines.a */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		1B16C7590D6C1B0E524E5803 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				C65D3D6F38AFD62B3FE74131 /* Pods-SPXDefines.debug.xcconfig */,
+				15ED248084FE593132B05176 /* Pods-SPXDefines.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
 		5431A2B31A7D0B6800C7861C = {
 			isa = PBXGroup;
 			children = (
@@ -93,6 +112,8 @@
 				5431A2BE1A7D0B6800C7861C /* SPXDefines */,
 				5431A2D81A7D0B6800C7861C /* SPXDefinesTests */,
 				5431A2BD1A7D0B6800C7861C /* Products */,
+				1B16C7590D6C1B0E524E5803 /* Pods */,
+				0595F80B468ACF683937606F /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -108,6 +129,7 @@
 		5431A2BE1A7D0B6800C7861C /* SPXDefines */ = {
 			isa = PBXGroup;
 			children = (
+				5431A31B1A7D42FF00C7861C /* SPXDefines.podspec */,
 				5431A2C31A7D0B6800C7861C /* AppDelegate.h */,
 				5431A2C41A7D0B6800C7861C /* AppDelegate.m */,
 				5431A2C91A7D0B6800C7861C /* Main.storyboard */,
@@ -168,7 +190,6 @@
 				5431A30C1A7D122D00C7861C /* SPXDescription */,
 				5431A2FD1A7D0DD500C7861C /* SPXEncoding */,
 				5431A2FF1A7D0DD500C7861C /* SPXLogging */,
-				5431A3111A7D15C400C7861C /* POD */,
 			);
 			path = Classes;
 			sourceTree = "<group>";
@@ -211,16 +232,6 @@
 			path = SPXDescription;
 			sourceTree = "<group>";
 		};
-		5431A3111A7D15C400C7861C /* POD */ = {
-			isa = PBXGroup;
-			children = (
-				5431A2F61A7D0DD500C7861C /* LICENSE.md */,
-				5431A2F71A7D0DD500C7861C /* README.md */,
-				5431A2FC1A7D0DD500C7861C /* SPXDefines.podspec */,
-			);
-			name = POD;
-			sourceTree = "<group>";
-		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -228,9 +239,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 5431A2DF1A7D0B6800C7861C /* Build configuration list for PBXNativeTarget "SPXDefines" */;
 			buildPhases = (
+				4B589F8CB6F47034F53E8688 /* Check Pods Manifest.lock */,
 				5431A2B81A7D0B6800C7861C /* Sources */,
 				5431A2B91A7D0B6800C7861C /* Frameworks */,
 				5431A2BA1A7D0B6800C7861C /* Resources */,
+				7BCD07C2AD03367E4CA9FC4A /* Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -302,7 +315,6 @@
 			buildActionMask = 2147483647;
 			files = (
 				5431A2CB1A7D0B6800C7861C /* Main.storyboard in Resources */,
-				5431A3051A7D0DD500C7861C /* SPXDefines.podspec in Resources */,
 				5431A2CD1A7D0B6800C7861C /* Images.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -316,19 +328,52 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		4B589F8CB6F47034F53E8688 /* Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\nEOM\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+		7BCD07C2AD03367E4CA9FC4A /* Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-SPXDefines/Pods-SPXDefines-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		5431A2B81A7D0B6800C7861C /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				5431A2F31A7D0C2900C7861C /* Logging.m in Sources */,
+				5431A3181A7D42BF00C7861C /* Description.m in Sources */,
 				5431A2C51A7D0B6800C7861C /* AppDelegate.m in Sources */,
+				5431A3171A7D42BF00C7861C /* Assertions.m in Sources */,
+				5431A31A1A7D42BF00C7861C /* Logging.m in Sources */,
 				5431A2C21A7D0B6800C7861C /* main.m in Sources */,
-				5431A2F01A7D0C2200C7861C /* Assertions.m in Sources */,
-				5431A3151A7D270100C7861C /* Description.m in Sources */,
-				5431A2ED1A7D0C1A00C7861C /* Encoding.m in Sources */,
 				5431A30B1A7D0F3E00C7861C /* SPXAssertionsInternal.m in Sources */,
 				5431A3061A7D0DD500C7861C /* SPXLoggingInternal.m in Sources */,
+				5431A3191A7D42BF00C7861C /* Encoding.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -442,6 +487,7 @@
 		};
 		5431A2E01A7D0B6800C7861C /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = C65D3D6F38AFD62B3FE74131 /* Pods-SPXDefines.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
@@ -453,6 +499,7 @@
 		};
 		5431A2E11A7D0B6800C7861C /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 15ED248084FE593132B05176 /* Pods-SPXDefines.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
