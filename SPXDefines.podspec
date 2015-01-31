@@ -24,7 +24,7 @@ Pod::Spec.new do |s|
 	
   s.source       = { :git => "https://github.com/shaps80/SPXDefines.git", :tag => s.version.to_s }
 
-  s.source_files  = '.', '*.{h,m}'
+  s.source_files  = 'Classes/**/*.{h,m}'
   s.requires_arc = true
 	
 	s.subspec 'Asserts' do |asserts|
