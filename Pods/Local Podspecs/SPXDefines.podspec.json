@@ -1,8 +1,8 @@
 {
   "name": "SPXDefines",
-  "version": "1.0.6",
+  "version": "1.1.0",
   "summary": "Useful macro's for Objective-C projects",
-  "description": "                   Useful macro's for Objective-C projects.\n\n                   * SPXAssertionDefines - Provides convenience assertions that will NOT crash on release builds\n                   * SPXEncodingDefines - Provides cleaner encoding/decoding macros with compile-time checking\n                   * SPXLoggingDefines - Provides cleaner logging, using CocoaLumberjack if available, otherwise falling gracefully back to NSLog with cleaner output.\n",
+  "description": "                   Useful macro's for Objective-C projects. All of the macros include compile-time checks where applicable.\n\n                   * SPXAssertionDefines - Provides convenience assertions that will NOT crash on release builds\n                   * SPXDescriptionDefines - Provides convenient description and keyPath macros for better and more consistent representations of your subclasses.\n                   * SPXEncodingDefines - Provides cleaner encoding/decoding macros with compile-time checking\n                   * SPXLoggingDefines - Provides cleaner logging, using CocoaLumberjack if available, otherwise falling gracefully back to NSLog with cleaner output.\n",
   "homepage": "https://github.com/shaps80/SPXDefines",
   "license": {
     "type": "MIT",
@@ -18,7 +18,7 @@
   },
   "source": {
     "git": "https://github.com/shaps80/SPXDefines.git",
-    "tag": "1.0.6"
+    "tag": "1.1.0"
   },
   "source_files": "Classes/**/*.{h,m}",
   "requires_arc": true,
