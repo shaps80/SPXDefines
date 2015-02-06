@@ -22,31 +22,8 @@ Pod::Spec.new do |s|
   s.ios.deployment_target = '5.0'
   s.osx.deployment_target = '10.7'
 	
-  s.source       = { :git => "https://github.com/shaps80/SPXDefines.git", :tag => s.version.to_s }  
+  s.source       = { :git => "https://github.com/shaps80/SPXDefines.git", :tag => s.version.to_s }
+  s.source_files = 'Pod/Classes/**/*.{h,m}'
   s.requires_arc = true
-	
-	s.subspec 'Asserts' do |spec|
-		spec.source_files = 'Classes/SPXAsserts/*.{h,m}'
-    spec.dependency 'SPXDefines/Common'
-	end
-	
-	s.subspec 'Encoding' do |spec|
-		spec.source_files = 'Classes/SPXEncoding/*.{h,m}'
-    spec.dependency 'SPXDefines/Common'
-	end
-	
-	s.subspec 'Logging' do |spec|
-		spec.source_files = 'Classes/SPXLogging/*.{h,m}'
-    spec.dependency 'SPXDefines/Common'
-	end
-
-  s.subspec 'Description' do |spec|
-    spec.source_files = 'Classes/SPXDescription/*.{h,m}'
-    spec.dependency 'SPXDefines/Common'
-  end
-  
-  s.subspec 'Common' do |spec|
-    spec.source_files = 'Classes/SPXDefinesCommon.h'
-  end
 
 end
