@@ -23,7 +23,7 @@ Pod::Spec.new do |s|
   s.osx.deployment_target = '10.7'
 	
   s.source       = { :git => "https://github.com/shaps80/SPXDefines.git", :tag => s.version.to_s }
-  s.source_files = 'Pod/Classes/**/*.{h,m}'
+  s.source_files = 'Classes/**/*.{h,m}'
   s.requires_arc = true
 
 end
