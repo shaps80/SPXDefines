@@ -12,8 +12,6 @@
 		5431A2CB1A7D0B6800C7861C /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5431A2C91A7D0B6800C7861C /* Main.storyboard */; };
 		5431A2CD1A7D0B6800C7861C /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 5431A2CC1A7D0B6800C7861C /* Images.xcassets */; };
 		5431A2DC1A7D0B6800C7861C /* SPXDefinesTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 5431A2DB1A7D0B6800C7861C /* SPXDefinesTests.m */; };
-		5431A3061A7D0DD500C7861C /* SPXLoggingInternal.m in Sources */ = {isa = PBXBuildFile; fileRef = 5431A3011A7D0DD500C7861C /* SPXLoggingInternal.m */; };
-		5431A30B1A7D0F3E00C7861C /* SPXAssertionsInternal.m in Sources */ = {isa = PBXBuildFile; fileRef = 5431A30A1A7D0F3E00C7861C /* SPXAssertionsInternal.m */; };
 		5431A3171A7D42BF00C7861C /* Assertions.m in Sources */ = {isa = PBXBuildFile; fileRef = 5431A2EF1A7D0C2200C7861C /* Assertions.m */; };
 		5431A3181A7D42BF00C7861C /* Description.m in Sources */ = {isa = PBXBuildFile; fileRef = 5431A3141A7D270100C7861C /* Description.m */; };
 		5431A3191A7D42BF00C7861C /* Encoding.m in Sources */ = {isa = PBXBuildFile; fileRef = 5431A2EC1A7D0C1A00C7861C /* Encoding.m */; };
@@ -371,8 +369,6 @@
 				5431A3171A7D42BF00C7861C /* Assertions.m in Sources */,
 				5431A31A1A7D42BF00C7861C /* Logging.m in Sources */,
 				5431A2C21A7D0B6800C7861C /* main.m in Sources */,
-				5431A30B1A7D0F3E00C7861C /* SPXAssertionsInternal.m in Sources */,
-				5431A3061A7D0DD500C7861C /* SPXLoggingInternal.m in Sources */,
 				5431A3191A7D42BF00C7861C /* Encoding.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
