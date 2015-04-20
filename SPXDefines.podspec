@@ -1,7 +1,7 @@
 Pod::Spec.new do |s|
 
   s.name         = "SPXDefines"
-  s.version      = "1.2.1"
+  s.version      = "1.2.2"
   s.summary      = "Useful macro's for Objective-C projects"
   s.description  = <<-DESC
                    Useful macro's for Objective-C projects. All of the macros include compile-time checks where applicable.
