@@ -1,5 +1,5 @@
 /*
-   Copyright (c) 2015 Snippex. All rights reserved.
+ Copyright (c) 2015 Snippex. All rights reserved.
  
  Redistribution and use in source and binary forms, with or without
  modification, are permitted provided that the following conditions are met:
@@ -26,7 +26,7 @@
 #import "Encoding.h"
 #import "SPXDefines.h"
 
-@interface Encoding ()
+@interface Encoding () <NSSecureCoding>
 
 @property (nonatomic, copy) NSString *name;
 @property (nonatomic, assign) NSInteger age;
@@ -59,6 +59,11 @@ __attribute__((constructor)) static void EncodingConstructor(void) {
       }
     }
   }
+}
+
++ (BOOL)supportsSecureCoding
+{
+  return YES;
 }
 
 - (id)initWithCoder:(NSCoder *)aDecoder
