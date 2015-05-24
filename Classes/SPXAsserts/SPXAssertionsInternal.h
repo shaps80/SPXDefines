@@ -78,7 +78,8 @@ extern void SPXAssertLog(NSString *message);
 #define _SPXInvalidConditionString(condition) (@"Invalid condition not satisfying: " #condition)
 #define _SPXGenericAssertCondition(ctype, condition) NS ## ctype ## Assert((condition), _SPXInvalidConditionString((condition)))
 #define _SPXGenericErrorMake(condition, class, func) _SPXAssertionsErrorMake(_SPXInvalidConditionString(condition), class, func)
-#define _SPXGenericAssertTrueOrPerformAction(ctype, condition, action) ({ SPXAssertLog(_SPXInvalidConditionString(condition)); \
+#define _SPXGenericAssertTrueOrPerformAction(ctype, condition, action) ({ \
+if (!(condition)) { SPXAssertLog(_SPXInvalidConditionString(condition)); } \
 _SPX ## ctype ## AssertCondition(condition); \
 if (!(condition)) { _SPX ## ctype ## ErrorMake(condition); action; } })
 #define _SPXGenericAssertTrueOrReturnError(ctype, condition) {{ _SPX ## ctype ## AssertCondition(condition); \
